@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Talha ♥ Farheen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <nav class="navbar">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="story.html">Our Story</a></li>
+    <li><a href="memories.html">Memories</a></li>
+    <li><a href="letters.html">Letters</a></li>
+  </ul>
+</nav>
+
+  <div class="container">
+    <h1>Talha ♥ Farheen</h1>
+    <h2>Miles Apart, Hearts Together</h2>
+
+    <div class="card">
+      <p>
+        Farheen,<br><br>
+        Ye website sirf ek page nahi hai…<br>
+        Ye har wo feeling hai jo main tumse kehna chahta hoon<br>
+        jab distance beech mein aa jata hai.<br><br>
+
+        Chahe hum door ho,<br>
+        tum meri har subah ki dua ho<br>
+        aur har raat ka sukoon.<br><br>
+
+        Hamesha tumhara,<br>
+        Talha
+      </p>
+    </div>
+
+    <a class="button" href="story.html">Read Our Story ❤️</a>
+  </div>
+  
+  
+<!-- Background Music -->
+<audio id="bg-music" loop>
+  <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicToggle">🎵</button>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const button = document.getElementById("musicToggle");
+
+  let musicState = localStorage.getItem("musicPlaying");
+
+  if (musicState === "true") {
+    music.play();
+    button.classList.add("playing");
+  }
+
+  button.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      localStorage.setItem("musicPlaying", "true");
+      button.classList.add("playing");
+    } else {
+      music.pause();
+      localStorage.setItem("musicPlaying", "false");
+      button.classList.remove("playing");
+    }
+  });
+</script>
+  
+  
+  <span class="heart" style="left:10%">❤️</span>
+<span class="heart" style="left:30%; animation-delay:2s;">💗</span>
+<span class="heart" style="left:50%; animation-delay:4s;">💖</span>
+<span class="heart" style="left:70%; animation-delay:1s;">💞</span>
+<span class="heart" style="left:90%; animation-delay:3s;">❤️</span>
+  
+  
+
+</body>
+</html>

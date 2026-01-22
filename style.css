@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #ffe5d9;
+  color: #4a2c2a;
+  text-align: center;
+}
+
+.container {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+a.button {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #f4a261;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+
+/* Navigation Menu */
+.navbar {
+  background: #f4a261;
+  padding: 15px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Memories Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+/* Letters Page */
+.letter {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.letter-date {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.letter p {
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+
+/* Active Menu Item */
+.navbar ul li a.active {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 4px;
+  font-weight: 600;
+}
+
+
+.navbar {
+  background: #f4a261;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+body {
+  padding-top: 0;
+}
+
+
+/* Smooth Transitions (Global) */
+a, .button, .gallery-item, .letter {
+  transition: all 0.3s ease;
+}
+
+/* Navbar hover effect */
+.navbar ul li a:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* Button hover */
+a.button:hover {
+  background: #e76f51;
+  transform: scale(1.05);
+}
+
+/* Memory image hover */
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Letter hover */
+.letter:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Music Button */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #f4a261;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 2000;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}
+
+
+.music-btn.playing {
+  background: #e76f51;
+}
+
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 18px;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+.card, .letter {
+  background: rgba(255,255,255,0.95);
+}
+
+.container {
+  padding-bottom: 80px;
+}

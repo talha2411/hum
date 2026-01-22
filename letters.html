@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letters to You | Talha ♥ Farheen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="memories.html">Memories</a></li>
+      <li><a href="letters.html" class="active">Letters</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Letters to You</h1>
+
+    <div class="card">
+      <p>
+        Kuch Shayriya meri tarf se 🥰 .
+      </p>
+    </div>
+
+    <!-- Letter 1 -->
+    <div class="letter">
+     <!-- /*<div class="letter-date">November 2025</div>*/ -->
+      <p>
+        Farheen,<br><br>
+        Faasle toh sirf nakshe 🗺️ par hote hain,
+💗 Dil ke rishte toh dhadkano se judte hain.
+Door rehkar bhi tum mere sabse paas ho,
+Meri har dua 🤲 mein bas tum hi tum khaas ho.<br><br>
+
+        — Talha
+      </p>
+    </div>
+
+    <!-- Letter 2 -->
+    <div class="letter">
+      <!-- <div class="letter-date">December 2025</div> -->
+      <p>
+        Farheen,<br><br>
+        Ye dooriyan humein tod nahi sakti,
+Bas milne ki tadap thodi aur badha deti hain.
+Aankhein band karoon toh tum saamne hote ho,
+Par khule toh bas tumhari yaadein saath hoti hain ☺️.<br><br>
+—Talha
+      </p>
+    
+
+  </div>
+  
+  
+  <!-- Letter 3-->
+    <div class="letter">
+      <!-- <div class="letter-date">December 2025</div> -->
+      <p>
+        Farheen,<br><br>
+        Duriya humein kya juda karengi,
+Hum toh wo hain jo khwaabon mein bhi saath chalte hain.
+Bas thoda sabr rakho meri jaan,
+Ye intezaar ka phal bada haseen hoga💙.<br><br>
+—Talha
+      </p>
+    
+
+  </div>
+
+<!-- Letter 4-->
+    <div class="letter">
+      <!-- <div class="letter-date">December 2025</div> -->
+      <p>
+        Farheen,<br><br>
+        Kash ye dooriyan khatm ho jayein kisi din,
+Aur tum meri bahon mein ho kisi din.
+Na screen ki deewar ho, na network ka bahana,
+Bas main hoon, tum ho, aur hamara ho thikana😊.<br><br>
+—Talha
+      </p>
+    
+
+  </div>
+
+
+
+
+
+<!-- Letter 4-->
+    <div class="letter">
+      <!-- <div class="letter-date">December 2025</div> -->
+      <p>
+        Farheen,<br><br>
+        Mobile ki screen par tera chehra dekh kar muskura leta hoon,
+Is tarah main apni thodi si pyaas bujha leta hoon.
+Milne ki tadap toh har pal rehti hai dil mein,
+Par teri awaaz sunkar sukoon ka lamha bita leta hoon😉.<br><br>
+—Talha
+      </p>
+    </div>
+
+  </div>
+  
+  
+  
+  
+<!-- Background Music -->
+<audio id="bg-music" loop>
+  <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicToggle">🎵</button>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const button = document.getElementById("musicToggle");
+
+  let musicState = localStorage.getItem("musicPlaying");
+
+  if (musicState === "true") {
+    music.play();
+    button.classList.add("playing");
+  }
+
+  button.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      localStorage.setItem("musicPlaying", "true");
+      button.classList.add("playing");
+    } else {
+      music.pause();
+      localStorage.setItem("musicPlaying", "false");
+      button.classList.remove("playing");
+    }
+  });
+</script>
+  
+  
+  
+  <span class="heart" style="left:10%">❤️</span>
+<span class="heart" style="left:30%; animation-delay:2s;">💗</span>
+<span class="heart" style="left:50%; animation-delay:4s;">💖</span>
+<span class="heart" style="left:70%; animation-delay:1s;">💞</span>
+<span class="heart" style="left:90%; animation-delay:3s;">❤️</span>
+
+</body>
+</html>

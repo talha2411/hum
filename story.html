@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Story | Talha ♥ Farheen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="story.html" class="active">Our Story</a></li>
+    <li><a href="memories.html">Memories</a></li>
+    <li><a href="letters.html">Letters</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="container">
+    <h1>Our Story</h1>
+
+    <div class="card">
+      <p>
+        Kabhi socha nahi tha ke koi itna apna lagne lagega.<br>
+        Baaton se shuruaat hui… phir aadat bani…<br>
+        aur phir mohabbat.<br><br>
+
+        Hum door hain, lekin dil kabhi door nahi hue.<br>
+        Har call, har message, har intezaar<br>
+        sirf ek hi cheez batati hai —<br>
+        <b>yeh rishta khaas hai.</b><br><br>
+
+        Mushkilein aayi, distance aaya,<br>
+        lekin saath chhodne ka khayal kabhi nahi aaya.<br><br>
+
+        Ye kahani abhi adhoori hai,<br>
+        kyunki best chapters abhi likhne baaki hain.<br><br>
+
+        — <b>Talha & Farheen</b>
+      </p>
+    </div>
+
+    <a class="button" href="index.html">⬅ Back to Home</a>
+  </div>
+  
+  
+<!-- Background Music -->
+<audio id="bg-music" loop>
+  <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicToggle">🎵</button>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const button = document.getElementById("musicToggle");
+
+  let musicState = localStorage.getItem("musicPlaying");
+
+  if (musicState === "true") {
+    music.play();
+    button.classList.add("playing");
+  }
+
+  button.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      localStorage.setItem("musicPlaying", "true");
+      button.classList.add("playing");
+    } else {
+      music.pause();
+      localStorage.setItem("musicPlaying", "false");
+      button.classList.remove("playing");
+    }
+  });
+</script>
+  
+  
+  
+  <span class="heart" style="left:10%">❤️</span>
+<span class="heart" style="left:30%; animation-delay:2s;">💗</span>
+<span class="heart" style="left:50%; animation-delay:4s;">💖</span>
+<span class="heart" style="left:70%; animation-delay:1s;">💞</span>
+<span class="heart" style="left:90%; animation-delay:3s;">❤️</span>
+
+</body>
+</html>

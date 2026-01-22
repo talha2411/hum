@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memories | Talha ♥ Farheen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="memories.html" class="active">Memories</a></li>
+      <li><a href="letters.html">Letters</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Our Memories</h1>
+
+    <div class="card">
+      <p>
+        Ye tasveerein sirf moments nahi hain,<br>
+        ye wo ehsaas hain jo humesha saath rahenge.
+      </p>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/first-meet.jpg" alt="Memory 1">
+          <div class="caption">A moment Allah chose to unite our hearts 💖 </div>
+        </div>
+        
+        
+        <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/shuruwaat.JPG" alt="Memory 1">
+          <div class="caption">Wo tumhara hamari zindagi me aana 😍 </div>
+        </div>
+        
+        
+
+        
+        <div class="gallery-item">
+          <img src="images/memory1.jpg" alt="Memory 1">
+          <div class="caption">The day I smiled because of you ❤️</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/memory2.jpg" alt="Memory 2">
+          <div class="caption">Ye jo mere chahre ka noor hai, bus ye tumhari wajah se hai 😊 </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/memory3.jpg" alt="Memory 3">
+          <div class="caption">Always you, always us 💞</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    
+    
+<!-- Background Music -->
+<audio id="bg-music" loop>
+  <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicToggle">🎵</button>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const button = document.getElementById("musicToggle");
+
+  let musicState = localStorage.getItem("musicPlaying");
+
+  if (musicState === "true") {
+    music.play();
+    button.classList.add("playing");
+  }
+
+  button.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      localStorage.setItem("musicPlaying", "true");
+      button.classList.add("playing");
+    } else {
+      music.pause();
+      localStorage.setItem("musicPlaying", "false");
+      button.classList.remove("playing");
+    }
+  });
+</script>
+    
+    
+    
+    <span class="heart" style="left:10%">❤️</span>
+<span class="heart" style="left:30%; animation-delay:2s;">💗</span>
+<span class="heart" style="left:50%; animation-delay:4s;">💖</span>
+<span class="heart" style="left:70%; animation-delay:1s;">💞</span>
+<span class="heart" style="left:90%; animation-delay:3s;">❤️</span>
+
+</body>
+</html>
