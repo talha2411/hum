@@ -231,3 +231,97 @@ a.button:hover {
 .container {
   padding-bottom: 80px;
 }
+
+
+#countdown-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+}
+
+#countdown-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#countdown {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#countdown span {
+  margin: 0 8px;
+  font-size: 32px;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+
+#countdown span {
+  text-shadow: 0 0 10px rgba(233, 30, 99, 0.6);
+}
+
+#revealBtn {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background: #e91e63;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#revealBtn:hover {
+  background: #c2185b;
+  transform: scale(1.05);
+}
+
+
+#countdown-section {
+  text-align: center;
+  padding: 60px 20px;
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+#countdown-section.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#revealBtn {
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background: #ff69b4;
+  color: white;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  transition: 0.3s ease;
+}
+
+#revealBtn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+#countdown {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff1493;
+}
+
+#countdown span {
+  margin: 0 6px;
+}
