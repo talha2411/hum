@@ -233,52 +233,33 @@ a.button:hover {
 }
 
 
-#countdown-section {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
-}
-
-#countdown-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-#countdown {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-#countdown span {
-  margin: 0 8px;
-  font-size: 32px;
-  color: #e91e63;
-  font-weight: bold;
-}
-
-
-#countdown span {
-  text-shadow: 0 0 10px rgba(233, 30, 99, 0.6);
-}
-
+/* ===== Button Styling ===== */
 #revealBtn {
-  padding: 12px 25px;
-  font-size: 16px;
+  display: inline-block;
+  margin: 40px auto;
+  padding: 14px 28px;
+  font-size: 18px;
   border: none;
-  border-radius: 25px;
-  background: #e91e63;
+  border-radius: 50px;
+  background: #ff69b4;
   color: white;
   cursor: pointer;
-  transition: 0.3s ease;
+  animation: bounce 2s infinite;
+  transition: all 0.3s ease;
 }
 
 #revealBtn:hover {
-  background: #c2185b;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  background: #ff1493;
 }
 
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
 
+/* ===== Countdown Section ===== */
 #countdown-section {
   text-align: center;
   padding: 60px 20px;
@@ -288,33 +269,28 @@ a.button:hover {
   transition: all 0.6s ease;
 }
 
+/* Show animation */
 #countdown-section.show {
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
 
-#revealBtn {
-  padding: 14px 28px;
-  font-size: 18px;
-  border: none;
-  border-radius: 50px;
-  background: #ff69b4;
-  color: white;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-  transition: 0.3s ease;
+/* Heading */
+#countdown-section h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-#revealBtn:hover {
-  transform: scale(1.1);
+/* Cute Text */
+#cuteText {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #777;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
+/* Countdown Numbers */
 #countdown {
   margin-top: 20px;
   font-size: 28px;
@@ -324,4 +300,22 @@ a.button:hover {
 
 #countdown span {
   margin: 0 6px;
+  font-size: 32px;
+}
+
+/* ===== Mobile Friendly ===== */
+@media (max-width: 600px) {
+
+  #revealBtn {
+    font-size: 16px;
+    padding: 12px 22px;
+  }
+
+  #countdown {
+    font-size: 22px;
+  }
+
+  #countdown span {
+    font-size: 26px;
+  }
 }
