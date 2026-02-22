@@ -24,6 +24,8 @@
   <div class="container">
     <h1>Talha ♥ Farheen</h1>
     <h2>Miles Apart, Hearts Together</h2>
+    
+  
 
     <div class="card">
       <p>
@@ -40,6 +42,20 @@
         Talha
       </p>
     </div>
+    
+   <button id="revealBtn">Tap Me 😚💖</button>
+
+<section id="countdown-section">
+  <h2>Guess What? 👀</h2>
+  <p id="cuteText">Counting Every Second Until I See You</p>
+
+  <div id="countdown">
+    <span id="days"></span>d
+    <span id="hours"></span>h
+    <span id="minutes"></span>m
+    <span id="seconds"></span>s
+  </div>
+</section>
 
     <a class="button" href="story.html">Read Our Story ❤️</a>
   </div>
@@ -73,6 +89,41 @@
       localStorage.setItem("musicPlaying", "false");
       button.classList.remove("playing");
     }
+  });
+</script>
+  
+<script>
+  const reunionDate = new Date("May 27, 2026 00:00:00").getTime();
+
+  const revealBtn = document.getElementById("revealBtn");
+  const countdownSection = document.getElementById("countdown-section");
+
+  revealBtn.addEventListener("click", function () {
+    countdownSection.classList.add("show");
+    revealBtn.style.display = "none";
+
+    const countdownFunction = setInterval(function () {
+
+      const now = new Date().getTime();
+      const distance = reunionDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML =
+          "Yayyyy! We’re Finally Together 😭💞";
+      }
+
+    }, 1000);
   });
 </script>
   
